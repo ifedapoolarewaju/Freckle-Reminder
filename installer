@@ -1,0 +1,5 @@
+curl --remote-name https://raw.githubusercontent.com/andela-oifedapo/Freckle-Reminder/master/Freckle-Reminder.app
+
+cwd=$(pwd)
+
+osascript -e 'tell application "System Events" to make login item at end with properties {path:"$cwd/Freckle-Reminder.app", hidden:false}'
