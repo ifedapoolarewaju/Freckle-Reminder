@@ -1,5 +1,13 @@
-curl --remote-name https://raw.githubusercontent.com/andela-oifedapo/Freckle-Reminder/master/Freckle-Reminder.app
+echo installing Freckle-Reminder...
 
-cwd=$(pwd)
+cd ~/Downloads
 
-osascript -e 'tell application "System Events" to make login item at end with properties {path:"$cwd/Freckle-Reminder.app", hidden:false}'
+git clone https://github.com/andela-oifedapo/Freckle-Reminder.git
+
+mv ~/Downloads/Freckle-Reminder/Freckle-Reminder.app ~/Applications/Freckle-Reminder.app
+hm=~
+
+osascript -e 'tell application "System Events" to make login item at end with properties {path:"'$hm'/Applications/Freckle-Reminder.app", hidden:true}'
+
+
+osascript -e 'tell application "Terminal" to close first window' & exit
