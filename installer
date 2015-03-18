@@ -4,10 +4,10 @@ cd ~/Downloads
 
 git clone https://github.com/andela-oifedapo/Freckle-Reminder.git
 
-mv ~/Downloads/Freckle-Reminder/Freckle-Reminder.app ~/Applications/Freckle-Reminder.app
-hm=~
+mv ~/Downloads/Freckle-Reminder/Freckle-Reminder.app /Applications/Freckle-Reminder.app
 
-osascript -e 'tell application "System Events" to make login item at end with properties {path:"'$hm'/Applications/Freckle-Reminder.app", hidden:true}'
+
+osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/Freckle-Reminder.app", hidden:true}'
 
 
 osascript -e 'tell application "Terminal" to close first window' & exit
